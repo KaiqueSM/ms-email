@@ -1,0 +1,27 @@
+
+server:
+    port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ms-email
+    username: postgres
+    password: postgres
+
+  jpa.hibernate:
+      ddl-auto: create
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: seuemail@gmail.com
+    password: senha
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  rabbitmq:
+    addresses: amqps://qysvgpzm:rXPmel3F-NquJ079M5zBRIYQAkaH31-s@stingray.rmq.cloudamqp.com/qysvgpzm
+    queue: ms.email
